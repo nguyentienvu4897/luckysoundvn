@@ -115,7 +115,7 @@ $preserve = json_decode($product->preserve);
                               <div class="item">
                                  <a href="javascript:;" title="44mm" class="d-block rounded text-center small font-weight-bold px-3 py-2 h-100">
                                     <p class="tit_pr m-0">
-                                       Thời gian bảo hành
+                                       Bảo hành
                                     </p>
                                     <p class="price_pr m-0">
                                        {{$product->thickness}} 
@@ -242,7 +242,7 @@ $preserve = json_decode($product->preserve);
                               @foreach ($preserve as $item)
                                  <div class="col-12 col-md-6 col-lg-6 col-xl-12">
                                     <div class="item line_b pb-2 ">
-                                       <span class="mb-2 d-block"><small style="font-weight:bold;">{{$item->detail}}</small>
+                                       <span class="mb-2 d-block"><img width="20" height="20" alt="label_con_2" src="{{url('frontend/images/label_img_2.png')}}" class="mr-1"><small style="font-weight:bold;">{{$item->detail}}</small>
                                        </span>
                                     </div>
                                  </div>

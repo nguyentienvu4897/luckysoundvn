@@ -256,7 +256,7 @@ Danh sách {{$title}}
                                     </li>
                                     <li class="filter-item filter-item--check-box">
                                        <label class="d-flex align-items-baseline m-0" for="10-20trieu">
-                                       <input type="radio" id="10-20trieu" name="price" class="d-none" value="10-25" >
+                                       <input type="radio" id="10-20trieu" name="price" class="d-none" value="10-20" >
                                        <span class="fa2 px-2 py-1 rounded border">Từ 10 - 20 triệu</span>
                                        </label>
                                     </li>
