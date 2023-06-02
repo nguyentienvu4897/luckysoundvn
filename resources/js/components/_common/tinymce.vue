@@ -76,6 +76,9 @@ export default {
       isTyping: false,
       init: {
         paste_data_images: true,
+        relative_urls: false,
+        remove_script_host: false,
+        convert_urls: false,
         plugins: [
           "advlist autolink lists link image charmap print preview hr anchor pagebreak",
           "searchreplace wordcount visualblocks visualchars code fullscreen",

@@ -28,6 +28,8 @@
    <meta name="twitter:title" content="@yield('title')" />
    <meta name="twitter:description" content="@yield('description')" />
    <meta name="twitter:image" content="@yield('image')" />
+   <meta name="google-site-verification" content="guaXr9HmIk_fRk8TSzfALXFr4Xv9tLRuei-ZJb2iFXQ" />
+
    <!-- Fav Icon -->
    <link rel="icon" href="{{asset(''.$setting->favicon)}}" type="image/x-icon">
    <style>
@@ -82,6 +84,15 @@
             };
             window.attachEvent ? window.attachEvent('onload', asyncLoad) : window.addEventListener('load', asyncLoad, false);
       })();
+   </script>
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SSKZWHE7DJ"></script>
+   <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+
+   gtag('config', 'G-SSKZWHE7DJ');
    </script>
 </head>
 <body id="body_m" >
