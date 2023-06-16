@@ -17,6 +17,15 @@
    <script src="{{	asset('frontend/js/jquery.min.js')}}" type="text/javascript"></script>
    <script src="{{ asset('frontend/js/checkout.vendor.min.js') }}"></script>
    <script src="{{ asset('frontend/js/checkout.min.js') }}"></script>
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SSKZWHE7DJ"></script>
+   <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+
+   gtag('config', 'G-SSKZWHE7DJ');
+   </script>
 </head>
 <body data-no-turbolink>
    <header class="banner">

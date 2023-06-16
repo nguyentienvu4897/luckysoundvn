@@ -360,7 +360,7 @@
       <div class="container">
             <div class="mew_bts_cate rounded p-3">
             <h3 class="title text-uppercase font-weight-bold position-relative pb-3 m-0 cl_tit_trending">
-               Giải pháp mô hình
+               Giải pháp âm thanh tổng thể
             </h3>
             <div class="m_trending m-0 combo-slide swiper-container position-relative">
                <div class="swiper-wrapper">

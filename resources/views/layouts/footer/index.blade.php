@@ -10,7 +10,7 @@
                   <p class="adr"><b>Trụ sở chính:  </b>{{$setting->address1}}</p>
                   <p><b>Email: </b><a href="mailto:{{$setting->email}}" title="{{$setting->email}}">{{$setting->email}}</a></p>
                   <p><b>Hotline: </b><a href="tel:{{$setting->phone1}}" title="{{$setting->phone1}}">{{$setting->phone1}}</a></p>
-                  <p style="font-size: 15px;"><b>Giấy chứng nhận Đăng ký Kinh doanh số 0108044xxx do Sở kế hoạch và Đầu tư Thành phố Hà Nội cấp ngày 27/10/2022</b></p>
+                  <p style="font-size: 15px;"><b>Giấy chứng nhận Đăng ký Kinh doanh số 0108044530 do Sở kế hoạch và Đầu tư Thành phố Hà Nội cấp ngày 27/10/2022</b></p>
                </address>
             </div>
             <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-xs-12 footer-left">

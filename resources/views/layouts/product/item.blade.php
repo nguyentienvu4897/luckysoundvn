@@ -7,8 +7,8 @@
 
 <div class="product-item position-relative p-2 rounded bg-white h-100 box_shadow">
    @if ($product->discount > 0)
-      <div class="sale-label sale-top-right position-absolute font-weight-bold">Giảm 
-            {{$product->discount}}% 
+      <div class="sale-label sale-top-right position-absolute font-weight-bold">Giảm
+            {{$product->discount}}%
       </div>
    @endif
    <a href="{{route('detailProduct', ['cate'=>$product->cate_slug, 'slug'=>$product->slug])}}" class="thumb d-block modal-open position-relative" title="{{languageName($product->name)}}">
@@ -16,13 +16,15 @@
          <img src="{{$img[0]}}" data-src="{{$img[0]}}" decoding="async" class="d-block img img-cover position-absolute lazy" alt="{{languageName($product->name)}}">
          </div>
          <span class="label_tag position-absolute d-inline-block pr-2 text-white d-flex align-items-center gap_5 rounded-10">
-         <img width="20" height="20" alt="label_con_2" src="{{$product->hang_muc}}" class="mr-1" style="width: 100%;">
+            @if (isset($product->hang_muc))
+            <img width="20" height="20" alt="label_con_2" src="{{$product->hang_muc}}" class="mr-1" style="width: 100%;">
+            @endif
          </span>
    </a>
    <div class="item-info mt-1 position-relative">
          <h3 class="item-title font-weight-bold">
          <a class="line_1" href="{{route('detailProduct', ['cate'=>$product->cate_slug, 'slug'=>$product->slug])}}" title="{{languageName($product->name)}}">
-         {{languageName($product->name)}} 
+         {{languageName($product->name)}}
          </a>
          </h3>
          @if ($product->price > 0 && $product->discount > 0)
