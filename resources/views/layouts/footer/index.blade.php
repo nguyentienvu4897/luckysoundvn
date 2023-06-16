@@ -7,9 +7,11 @@
                <img alt="Logo {{$setting->company}}" class="lazy" src="{{$setting->logo_footer}}" data-src="{{$setting->logo_footer}}">
                </a>
                <address class="vcard mb-4">
+                  <p class="adr"><b>HỘ KINH DOANH LUCKY SOUND</b></p>
                   <p class="adr"><b>Trụ sở chính:  </b>{{$setting->address1}}</p>
+                  <p><b>MST: </b>8647839090-001</p>
                   <p><b>Email: </b><a href="mailto:{{$setting->email}}" title="{{$setting->email}}">{{$setting->email}}</a></p>
-                  <p><b>Hotline: </b><a href="tel:{{$setting->phone1}}" title="{{$setting->phone1}}">{{$setting->phone1}}</a></p>
+                  <p><b>Số điện thoại: </b><a href="tel:{{$setting->phone1}}" title="{{$setting->phone1}}">{{$setting->phone1}}</a></p>
                   <p style="font-size: 15px;"><b>Giấy chứng nhận Đăng ký Kinh doanh số 0108044530 do Sở kế hoạch và Đầu tư Thành phố Hà Nội cấp ngày 27/10/2022</b></p>
                </address>
             </div>
@@ -60,8 +62,8 @@
                <div class="footer-column-1">
                   <div class="payment-accept">
                         <img class="first lazy" src="//bizweb.dktcdn.net/100/459/533/themes/868331/assets/placeholder_1x1.png?1676652384879" data-src="{{asset('frontend/images/payment-1.png')}}" alt="payment-1">
-                        <img class="lazy" src="//bizweb.dktcdn.net/100/459/533/themes/868331/assets/placeholder_1x1.png?1676652384879" data-src="{{asset('frontend/images/payment-2.png')}}" alt="payment-2"> 
-                        <img class="lazy" src="//bizweb.dktcdn.net/100/459/533/themes/868331/assets/placeholder_1x1.png?1676652384879" data-src="{{asset('frontend/images/payment-3.png')}}" alt="payment-3"> 
+                        <img class="lazy" src="//bizweb.dktcdn.net/100/459/533/themes/868331/assets/placeholder_1x1.png?1676652384879" data-src="{{asset('frontend/images/payment-2.png')}}" alt="payment-2">
+                        <img class="lazy" src="//bizweb.dktcdn.net/100/459/533/themes/868331/assets/placeholder_1x1.png?1676652384879" data-src="{{asset('frontend/images/payment-3.png')}}" alt="payment-3">
                         <img class="lazy" src="//bizweb.dktcdn.net/100/459/533/themes/868331/assets/placeholder_1x1.png?1676652384879" data-src="{{asset('frontend/images/payment-4.png')}}" alt="payment-4">
                   </div>
                </div>
