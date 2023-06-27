@@ -127,7 +127,7 @@
                         <div class="mr-2 mr-sm-3">
                         <img src="{{asset('frontend/images/img_poli_1.png')}}" alt="Bảo hành chính hãng" decoding="async">
                         </div>
-                        <div class="media-body"> 
+                        <div class="media-body">
                         Bảo hành chính hãng
                         </div>
                   </div>
@@ -137,7 +137,7 @@
                         <div class="mr-2 mr-sm-3">
                         <img src="{{asset('frontend/images/img_poli_2.png')}}" alt="Chất lượng cam kết" decoding="async">
                         </div>
-                        <div class="media-body"> 
+                        <div class="media-body">
                         Chất lượng cam kết
                         </div>
                   </div>
@@ -147,7 +147,7 @@
                         <div class="mr-2 mr-sm-3">
                         <img src="{{asset('frontend/images/img_poli_3.png')}}" alt="Dịch vụ vượt trội" decoding="async">
                         </div>
-                        <div class="media-body"> 
+                        <div class="media-body">
                         Dịch vụ vượt trội
                         </div>
                   </div>
@@ -157,7 +157,7 @@
                         <div class="mr-2 mr-sm-3">
                         <img src="{{asset('frontend/images/img_poli_4.png')}}" alt="Giao hàng nhanh chóng" decoding="async">
                         </div>
-                        <div class="media-body"> 
+                        <div class="media-body">
                         Giao hàng nhanh chóng
                         </div>
                   </div>
@@ -196,7 +196,7 @@
                         <div class="col-12 col-lg-4">
                         <h2 class="title text-uppercase font-weight-bold position-relative p-2 m-0 text-center text-lg-left cl_tit_fl">
                            <a class="position-relative" href="{{route('flashSale')}}" title="FLASH SALE">
-                           <img alt="FLASH SALE" src="//bizweb.dktcdn.net/100/459/533/themes/868331/assets/flash.gif?1676652384879"> 
+                           <img alt="FLASH SALE" src="//bizweb.dktcdn.net/100/459/533/themes/868331/assets/flash.gif?1676652384879">
                            FLASH SALE
                            </a>
                         </h2>
@@ -223,7 +223,7 @@
                   </div>
                   <script>
                         function dateIsValid(t){return t instanceof Date&&!isNaN(t)}function dateDiff(t){let e=(t-(new Date).getTime())/1e3,n={};if(e<=0)return n;const a={day:86400,hour:3600,minute:60,second:1};return Object.keys(a).forEach(function(t){n[t]=String(Math.floor(e/a[t])).padStart(2,"0"),e-=n[t]*a[t]}),n}
-                        
+
                         var countdown = setInterval(function () {
                            const clock = document.getElementById('clock');
                            const countDate = new Date(clock.dataset.end).getTime();
@@ -236,15 +236,15 @@
                               clock.classList.addClass('d-none');
                               return false;
                            }
-                        
+
                            let now = new Date().getTime();
                            let diff = dateDiff(countDate);
-                           
+
                            if (!Object.keys(diff).length){
                               console.log("Đếm ngược đã kết thúc!");
                               clock.classList.add('d-none');
                               clearInterval(countdown);
-                              return false; 
+                              return false;
                            }
                            clock.querySelector('.day').innerText = diff.day;
                            clock.querySelector('.hour').innerText = diff.hour;
@@ -287,7 +287,7 @@
             slidesPerView: 1,
             effect: 'fade'
       });
-      
+
       var swiperProductSaleSlider = new Swiper('.mew_flash', {
             spaceBetween: 18,
             loop: false,
@@ -590,7 +590,7 @@
       <div class="container">
             <div class="rounded bg-white p-3">
             <h2 class="title text-uppercase font-weight-bold position-relative pb-2 pb-lg-3 m-0">
-               <a class="position-relative" href="mew-reviews" title="Cùng Mew review">Cùng Lucky Sound review</a>
+               <a class="position-relative" href="#" title="Cùng review">Cùng Lucky Sound review</a>
             </h2>
             <div class="b_product">
                <div class="mew_video swiper-container position-relative">
@@ -664,7 +664,7 @@
                      @foreach ($cate->listBlog as $key=>$blog)
                         <article class="blog-item-list clearfix mb-3 row">
                               <div class="col-4 col-lg-3 pr-0 ">
-                              <a href="{{route('detailBlog', ['slug'=>$blog->slug])}}" class=" d-block modal-open thumb_img_blog_list thumb rounded" title="{{languageName($blog->title)}}"> 
+                              <a href="{{route('detailBlog', ['slug'=>$blog->slug])}}" class=" d-block modal-open thumb_img_blog_list thumb rounded" title="{{languageName($blog->title)}}">
                               <span class="modal-open position-relative d-block w-100 m-0 ratio3by2 has-edge aspect zoom">
                               <img src="{{$blog->image}}" data-src="{{$blog->image}}" decoding="async" alt="{{languageName($blog->title)}}" class="lazy d-block img img-cover position-absolute">
                               </span>

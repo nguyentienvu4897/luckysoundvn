@@ -22,7 +22,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script>
       window.__ENV__ = window.__ENV || {}; __ENV__.link ='https://luckysound.vn/';
-      window.Laravel = {!! 
+      window.Laravel = {!!
           json_encode([
               'csrf_token' => csrf_token(),
           ])
@@ -31,7 +31,7 @@
 
   </head>
   <body>
-    
+
     <div id="app"></div>
     <!-- built files will be auto injected -->
 
