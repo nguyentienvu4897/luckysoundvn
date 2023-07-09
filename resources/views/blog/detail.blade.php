@@ -32,7 +32,7 @@
 				<span class="slash-divider ml-2 mr-2">/</span>
 			</li>
 			<li>
-				<a href="{{route('allListBlog')}}" title="Tin tức"><span>Tin tức</span></a>	
+				<a href="{{route('allListBlog')}}" title="Tin tức"><span>Tin tức</span></a>
 				<span class="slash-divider ml-2 mr-2">/</span>
 			</li>
 			<li >{{languageName($blog_detail->title)}}</li>
@@ -55,12 +55,20 @@
 					<div class="entry-content text-justify rte ">
 						{!!languageName($blog_detail->content)!!}
 					</div>
-					<div class="tag-product clearfix mt-2 pt-2 border-top ">		
+                    <style>
+                    @media only screen and (max-width: 768px) {
+                        .rte iframe {
+                            width: 100% !important;
+                            height: 300px !important
+                        }
+                    }
+                    </style>
+					<div class="tag-product clearfix mt-2 pt-2 border-top ">
 					</div>
 					<div class="main blogs">
 						<h3 class="widget-title title mb-3">
 							<a href="/24h-cong-nghe" title="Bài viết liên quan: ">
-							Bài viết liên quan: 
+							Bài viết liên quan:
 							</a>
 						</h3>
 						<div class="widget-content latest-blog swiper-container position-relative">
@@ -69,7 +77,7 @@
 									<div class="swiper-slide">
 										<article class="blog-item-list clearfix mb-3 row">
 											<div class="col-4 col-lg-3 pr-0 ">
-												<a href="{{route('detailBlog', ['slug'=>$blog->slug])}}" class=" d-block modal-open thumb_img_blog_list thumb rounded" title="{{languageName($blog->title)}}"> 
+												<a href="{{route('detailBlog', ['slug'=>$blog->slug])}}" class=" d-block modal-open thumb_img_blog_list thumb rounded" title="{{languageName($blog->title)}}">
 												<span class="modal-open position-relative d-block w-100 m-0 ratio3by2 has-edge aspect zoom">
 												<img src="//bizweb.dktcdn.net/100/459/533/themes/868331/assets/placeholder_1x1.png?1681267458186" data-src="{{$blog->image}}" decoding="async" alt="{{languageName($blog->title)}}" class="lazy d-block img img-cover position-absolute">
 												</span>
@@ -96,7 +104,7 @@
 					<div class="position-sticky top_20px">
 						<div class="aside-content blog-list">
 							<h3 class="align-items-center article-name d-flex font-weight-bold pt-2 pt-lg-0 mb-3 pb-3 border-bottom">
-							<img class="lazy mr-2" src="//bizweb.dktcdn.net/100/459/533/themes/868331/assets/placeholder_1x1.png?1681267458186" data-src="{{asset('frontend/images/hot_ico.png')}}" alt="Chủ đề"> 
+							<img class="lazy mr-2" src="//bizweb.dktcdn.net/100/459/533/themes/868331/assets/placeholder_1x1.png?1681267458186" data-src="{{asset('frontend/images/hot_ico.png')}}" alt="Chủ đề">
 							Chủ đề
 							</h3>
 							<ul class="b_item mb-0 p-0">

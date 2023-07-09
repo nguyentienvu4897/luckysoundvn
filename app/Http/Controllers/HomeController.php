@@ -22,12 +22,15 @@ class HomeController extends Controller
     public function home()
     {
         $data['bannerAds'] = BannerAds::where('status',1)->first(['name','image','id']);
-        $data['comboPro'] = ProductCombo::where(['status'=>1])->get(['name', 'slug', 'link', 'image']);
+        $data['comboPro'] = ProductCombo::where(['status'=>1])->get(['id', 'name', 'slug', 'link', 'image'])->map(function ($query) {
+            $query->setRelation('products', $query->products);
+            return $query;
+        });
         $data['videos'] = Video::where(['status'=>1])->get();
         $data['flashSale'] = Product::where(['status'=>1,'discountStatus'=>1])->where('discount','>',0)->orderBy('id','DESC')->get(['id','category','name','discount','price','images','slug','cate_slug','type_slug', 'discountStatus','origin','hang_muc']);
         $data['cateHome'] = Category::with([
             'typeCate' => function ($query) {
-                $query->where('status',1)->orderBy('id','DESC')->select('cate_id','id', 'name','avatar','slug','cate_slug'); 
+                $query->where('status',1)->orderBy('id','DESC')->select('cate_id','id', 'name','avatar','slug','cate_slug');
             }
         ])->where(['quiz_id'=>1])->orderBy('id','ASC')->get(['id','quiz_id','name','home_title','avatar','slug','path_1','banner_1','path_2','banner_2'])->map(function ($query) {
             $query->setRelation('products', $query->products);

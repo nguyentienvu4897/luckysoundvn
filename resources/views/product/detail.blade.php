@@ -38,7 +38,7 @@ $preserve = json_decode($product->preserve);
                <span class="slash-divider ml-2 mr-2">/</span>
             </li>
             <li>
-               <a href="{{route('allListProCate', ['cate'=>$product->cate_slug])}}" title="{{languageName($product->cate->name)}}">{{languageName($product->cate->name)}}</a>						
+               <a href="{{route('allListProCate', ['cate'=>$product->cate_slug])}}" title="{{languageName($product->cate->name)}}">{{languageName($product->cate->name)}}</a>
                <span class="slash-divider ml-2 mr-2">/</span>
             </li>
             <li ><span>{{languageName($product->name)}}</span>
@@ -118,7 +118,7 @@ $preserve = json_decode($product->preserve);
                                        Bảo hành
                                     </p>
                                     <p class="price_pr m-0">
-                                       {{$product->thickness}} 
+                                       {{$product->thickness}}
                                     </p>
                                  </a>
                               </div>
@@ -219,7 +219,7 @@ $preserve = json_decode($product->preserve);
                         <div class="b_cont font-weight-bold">
                            <span class="d-block">
                            Gọi ngay <a href="tel:{{$setting->phone1}}" title="{{$setting->phone1}}">{{$setting->phone1}}</a> để được tư vấn tốt nhất!
-                           </span> 
+                           </span>
                         </div>
                      </div>
                      <div class="product-info position-relative mb-3 p-2 border rounded-10">
@@ -288,6 +288,14 @@ $preserve = json_decode($product->preserve);
                               {!!languageName($product->content)!!}
                               <div class="bg_cl position-absolute w-100"></div>
                            </div>
+                           <style>
+                            @media only screen and (max-width: 768px) {
+                                .rte iframe {
+                                    width: 100% !important;
+                                    height: 300px !important
+                                }
+                            }
+                           </style>
                            <div class="view_mores text-center mb-2">
                               <a href="javascript:;" class="one pt-2 pb-2 pl-4 pr-4 modal-open position-relative btn rounded-10 box_shadow font-weight-bold" title="Xem tất cả">Xem tất cả <img class="m_more" src="{{asset('frontend/images/sortdown.png')}}" alt="Xem tất cả"></a>
                               <a href="javascript:;" class="two pt-2 pb-2 pl-4 pr-4 modal-open position-relative btn rounded-10 box_shadow font-weight-bold d-none" title="Thu gọn">Thu gọn <img class="m_less" src="{{asset('frontend/images/sortdown.png')}}" alt="Thu gọn"></a>
@@ -314,7 +322,7 @@ $preserve = json_decode($product->preserve);
                                           <div class="col-4 pr-0">
                                              @if ($product->discount > 0)
                                                 <div class="sale-label sale-top-right position-absolute"><span class="font-weight-bold">-
-                                                   {{$product->discount}}% 
+                                                   {{$product->discount}}%
                                                    </span>
                                                 </div>
                                              @endif
@@ -327,7 +335,7 @@ $preserve = json_decode($product->preserve);
                                           <div class="item-info col-7 small">
                                              <h3 class="item-title font-weight-bold">
                                                 <a class="d-block modal-open" href="{{route('detailProduct', ['cate'=>$product->cate_slug, 'slug'=>$product->slug])}}" title="{{languageName($product->name)}}">
-                                                {{languageName($product->name)}} 
+                                                {{languageName($product->name)}}
                                                 </a>
                                              </h3>
                                              @if ($product->price > 0 && $product->discount > 0)

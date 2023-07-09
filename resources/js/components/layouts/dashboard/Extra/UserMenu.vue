@@ -20,12 +20,17 @@
         <collapse-transition>
           <ul class="nav user-menu__nav" v-show="!isClosed">
             <slot>
-
               <li>
                 <a href="javascript:;" class="twhite" @click="logout" >
                   <span class="sidebar-mini-icon">L</span>
-                  <span class="sidebar-normal">Logout</span>
+                  <span class="sidebar-normal">Đăng xuất</span>
                 </a>
+              </li>
+              <li>
+                <router-link :to="{name:'changepass'}">
+                  <span class="sidebar-mini-icon">C</span>
+                  <span class="sidebar-normal">Đổi mật khẩu</span>
+                </router-link>
               </li>
             </slot>
           </ul>

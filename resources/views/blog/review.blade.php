@@ -49,7 +49,15 @@
 					<div class="entry-content text-justify rte ">
 						{!!$review->content!!}
 					</div>
-					<div class="tag-product clearfix mt-2 pt-2 border-top ">		
+                    <style>
+                    @media only screen and (max-width: 768px) {
+                        .rte iframe {
+                            width: 100% !important;
+                            height: 300px !important
+                        }
+                    }
+                    </style>
+					<div class="tag-product clearfix mt-2 pt-2 border-top ">
 					</div>
 					<div class="main blogs">
                         <section id="video" class="m_blog mt-lg-4 mb-lg-4">
@@ -120,7 +128,7 @@
 					<div class="position-sticky top_20px">
 						<div class="aside-content blog-list">
 							<h3 class="align-items-center article-name d-flex font-weight-bold pt-2 pt-lg-0 mb-3 pb-3 border-bottom">
-							<img class="lazy mr-2" src="//bizweb.dktcdn.net/100/459/533/themes/868331/assets/placeholder_1x1.png?1681267458186" data-src="{{asset('frontend/images/hot_ico.png')}}" alt="Chủ đề"> 
+							<img class="lazy mr-2" src="//bizweb.dktcdn.net/100/459/533/themes/868331/assets/placeholder_1x1.png?1681267458186" data-src="{{asset('frontend/images/hot_ico.png')}}" alt="Chủ đề">
 							Chủ đề
 							</h3>
 							<ul class="b_item mb-0 p-0">

@@ -6,7 +6,7 @@ import store from '../store/index';
 import CONSTANTS from '../core/utils/constants';
 import ENUM from "../../config/enum";
 
-Vue.use(VueRouter); 
+Vue.use(VueRouter);
 let _routers = [
             {
                 name:'login',
@@ -14,6 +14,14 @@ let _routers = [
                 component: _import('auth/login'),
                 meta:{
                     requiresVisitor: true,
+                }
+            },
+            {
+                name:'changepass',
+                path:'/changepass',
+                component: _import('auth/reset-pass'),
+                meta:{
+                    requiresAuth: true,
                 }
             },
             {
@@ -448,7 +456,7 @@ let _routers = [
                     requiresAuth: true,
                 }
             },
-            
+
             {
                 name: 'listBannerads',
                 path: '/bannerads',

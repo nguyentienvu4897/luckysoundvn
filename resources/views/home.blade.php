@@ -169,9 +169,9 @@
    <section id="mew_cate_1" class="mew_cate_1 mt-3 mt-lg-4 mb-3 mt-lg-4">
       <div class="container">
             <div class="b_mew_cate rounded bg-white p-2 p-xl-3">
-            <h3 class="title text-uppercase font-weight-bold position-relative pb-3 m-0">
+            <p class="title text-uppercase font-weight-bold position-relative pb-3 m-0">
                Danh mục nổi bật
-            </h3>
+            </p>
             <div class="d-flex b_item flex-unset flex-md-wrap mobi_cate">
                @foreach ($typeCateHome as $cate)
                   <a href="{{route('allListProType', ['cate'=>$cate->cate_slug, 'type'=>$cate->slug])}}" title="{{languageName($cate->name)}}" class="item_cate d-flex align-items-center flex-column position-relative pt-2 rounded-10">
@@ -194,12 +194,12 @@
                <div class=" col-12 col-lg-9 mb-2 mb-lg-0">
                   <div class="row align-items-center">
                         <div class="col-12 col-lg-4">
-                        <h2 class="title text-uppercase font-weight-bold position-relative p-2 m-0 text-center text-lg-left cl_tit_fl">
+                        <p class="title text-uppercase font-weight-bold position-relative p-2 m-0 text-center text-lg-left cl_tit_fl">
                            <a class="position-relative" href="{{route('flashSale')}}" title="FLASH SALE">
                            <img alt="FLASH SALE" src="//bizweb.dktcdn.net/100/459/533/themes/868331/assets/flash.gif?1676652384879">
                            FLASH SALE
                            </a>
-                        </h2>
+                        </p>
                         </div>
                         <div class="col-12 col-lg-8">
                         </div>
@@ -359,14 +359,14 @@
    <section id="mew_cate_2" class="mew_cate_2 mt-3 mt-lg-4 mb-3 mb-lg-4" style="--cl_tit_trending: #333;--bg_trending_1: #ffecd2;--bg_trending_2: #fcb69f;">
       <div class="container">
             <div class="mew_bts_cate rounded p-3">
-            <h3 class="title text-uppercase font-weight-bold position-relative pb-3 m-0 cl_tit_trending">
+            <p class="title text-uppercase font-weight-bold position-relative pb-3 m-0 cl_tit_trending">
                Giải pháp âm thanh tổng thể
-            </h3>
+            </p>
             <div class="m_trending m-0 combo-slide swiper-container position-relative">
                <div class="swiper-wrapper">
                   @foreach ($comboPro as $combo)
                      <div class="swiper-slide">
-                           <a href="{{route('allProductCombo', ['slug'=>$combo->slug])}}" title="{{$combo->name}}" class="item_cate d-flex align-items-center flex-column position-relative bg-white rounded-10 p-3 h-100">
+                           <a href="{{ (count($combo->products) > 0) ? route('allProductCombo', ['slug'=>$combo->slug]) : $combo->link}}" title="{{$combo->name}}" class="item_cate d-flex align-items-center flex-column position-relative bg-white rounded-10 p-3 h-100">
                            <div class="b_img d-flex align-items-center justify-content-space-between w-100">
                               <div class="item modal-open position-relative">
                                  <div class="position-relative w-100 m-0 ratio1by1 has-edge aspect">
@@ -399,7 +399,7 @@
                   },
                   breakpoints: {
                      0: {
-                        slidesPerView: 2,
+                        slidesPerView: 1.5,
                         effect: 'fade'
                      },
                      576: {
@@ -426,11 +426,11 @@
             <div class="container">
                   <div class="rounded bg-white p-2">
                   <div class="head_box p-2 d-flex align-items-md-center justify-content-between flex-column flex-md-row">
-                     <h2 class="title text-uppercase font-weight-bold position-relative m-0">
+                     <p class="title text-uppercase font-weight-bold position-relative m-0">
                         <a class="position-relative" href="{{route('allListProCate', ['cate'=>$cate->slug])}}" title="{{$cate->home_title}}">
                         {{$cate->home_title}}
                         </a>
-                     </h2>
+                     </p>
                      <div class="list_link_pr d-flex pt-2 pb-2">
                         @foreach ($cate->typeCate as $type)
                            <a class="border rounded-10 font-weight-bold js-tab-title" href="{{route('allListProType',['cate'=>$type->cate_slug, 'type'=>$type->slug])}}" data-tab="galaxy-ford" data-alias={{route('allListProType',['cate'=>$type->cate_slug, 'type'=>$type->slug])}} title="{{languageName($type->name)}}">
@@ -504,11 +504,11 @@
             <div class="container">
                   <div class="rounded bg-white p-2">
                   <div class="head_box p-2 d-flex align-items-md-center justify-content-between flex-column flex-md-row">
-                     <h2 class="title text-uppercase font-weight-bold position-relative m-0">
+                     <p class="title text-uppercase font-weight-bold position-relative m-0">
                         <a class="position-relative" href="{{route('allListProCate', ['cate'=>$cate->slug])}}" title="{{$cate->home_title}}">
                         {{$cate->home_title}}
                         </a>
-                     </h2>
+                     </p>
                      <div class="list_link_pr d-flex pt-2 pb-2">
                         @foreach ($cate->typeCate as $type)
                            <a class="border rounded-10 font-weight-bold" href="{{route('allListProType',['cate'=>$type->cate_slug, 'type'=>$type->slug])}}" title="{{languageName($type->name)}}">{{languageName($type->name)}}</a>
@@ -589,9 +589,9 @@
    <section id="video" class="m_blog mt-3 mt-lg-4 mb-3 mb-lg-4">
       <div class="container">
             <div class="rounded bg-white p-3">
-            <h2 class="title text-uppercase font-weight-bold position-relative pb-2 pb-lg-3 m-0">
+            <p class="title text-uppercase font-weight-bold position-relative pb-2 pb-lg-3 m-0">
                <a class="position-relative" href="#" title="Cùng review">Cùng Lucky Sound review</a>
-            </h2>
+            </p>
             <div class="b_product">
                <div class="mew_video swiper-container position-relative">
                   <div class="swiper-wrapper">
@@ -606,7 +606,7 @@
                                     </div>
                               </a>
                            </div>
-                           <h3 class="title_blo font-weight-bold mt-2"><a class="line_2" href="{{route('reviewCus', ['slug'=>$video->slug])}}" title="{{$video->name}}">{{$video->name}}</a></h3>
+                           <p class="title_blo font-weight-bold mt-2"><a class="line_2" href="{{route('reviewCus', ['slug'=>$video->slug])}}" title="{{$video->name}}">{{$video->name}}</a></p>
                         </div>
                         </div>
                      @endforeach
@@ -656,11 +656,11 @@
             <div class="b_blog row">
                @foreach ($homeCateBlog as $cate)
                   <div class="col-12 col-md-6">
-                     <h2 class="title text-uppercase font-weight-bold position-relative pb-2 pb-lg-3 m-0">
+                     <p class="title text-uppercase font-weight-bold position-relative pb-2 pb-lg-3 m-0">
                         <a class="position-relative" href="{{route('allListBlog'). '?type=#'. $cate->slug}}" title="{{languageName($cate->name)}}">
                         {{languageName($cate->name)}}
                         </a>
-                     </h2>
+                     </p>
                      @foreach ($cate->listBlog as $key=>$blog)
                         <article class="blog-item-list clearfix mb-3 row">
                               <div class="col-4 col-lg-3 pr-0 ">
@@ -671,9 +671,9 @@
                               </a>
                               </div>
                               <div class="blogs-rights col-8 col-lg-9">
-                              <h3 class="blog-item-name font-weight-bold mb-1 title_blo">
+                              <p class="blog-item-name font-weight-bold mb-1 title_blo">
                                  <a class="line_1" href="{{route('detailBlog', ['slug'=>$blog->slug])}}" title="{{languageName($blog->title)}}">{{languageName($blog->title)}}</a>
-                              </h3>
+                              </p>
                               <div class="post-time small">{{date('d/m/Y', strtotime($blog->created_at))}}</div>
                               <div class="sum line_2 h-auto text-justify">
                                  {{languageName($blog->description)}}

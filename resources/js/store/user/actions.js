@@ -15,7 +15,7 @@ export const destroyToken = (context, opts) => {
             })
         })
     }
-    
+
 };
 export const retrieveToken = ({commit}, opts) => {
     return new Promise((resolve, reject) => {
@@ -52,5 +52,13 @@ export const profileUserCms = ({commit}, opts) => {
         })
     })
 };
-
+export const changePass = ({commit}, opts) => {
+    return new Promise((resolve, reject) => {
+        HTTP.post('/api/reset-pass', opts).then(response => {
+            return resolve(response.data);
+        }).catch(error => {
+            return reject(error);
+        })
+    })
+};
 

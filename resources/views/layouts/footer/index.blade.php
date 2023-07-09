@@ -18,7 +18,7 @@
             <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-xs-12 footer-left">
                <div class="row">
                   <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
-                     <h3 class="footer-title mb-2 position-relative font-weight-bold">Chăm sóc khách hàng</h3>
+                     <p class="footer-title mb-2 position-relative font-weight-bold">Chăm sóc khách hàng</p>
                      <ul class="links">
                         <li><b>Hotline:</b> <a href="tel:0961932222" title="tel">096 193 2222 </a> (8h - 22h)</li>
                         <li><b>Kinh doanh:</b> <a href="tel:0866958331" title="tel">0866 958 331 </a> (8h - 22h)</li>
@@ -27,7 +27,7 @@
                      </ul>
                   </div>
                   <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
-                     <h3 class="footer-title mb-2 position-relative font-weight-bold">Chính sách hỗ trợ</h3>
+                     <p class="footer-title mb-2 position-relative font-weight-bold">Chính sách hỗ trợ</p>
                      <ul class="links">
                         @foreach ($helpCus as $item)
                         <li><a href="{{route('helpCus', ['slug'=>$item->slug])}}" title="{{$item->title}}">{{$item->title}}</a></li>
@@ -37,7 +37,7 @@
                </div>
             </div>
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-left">
-               <h3 class="footer-title mb-2 position-relative font-weight-bold">Kết nối với chúng tôi</h3>
+               <p class="footer-title mb-2 position-relative font-weight-bold">Kết nối với chúng tôi</p>
                <div class="social position-relative pb-2">
                   <a href="{{$setting->facebook}}" target="_blank" class="position-relative iso sitdown modal-open d-inline-block facebook mr-1" title="Facebook">
                   <img class="lazy" src="//bizweb.dktcdn.net/100/459/533/themes/868331/assets/placeholder_1x1.png?1676652384879" data-src="{{asset('frontend/images/facebook.png')}}" alt="facebook" width=32 height=32>

@@ -70,9 +70,29 @@ class AuthController extends Controller
 		$user->type = 1;
 		$user->save();
 	}
+    
 	public function authentication()
 	{
         $user = Auth::user();
 		return $user;
+	}
+
+    public function resetPass(Request $request)
+	{
+		$user = Auth::user();
+		$oldPass = $request->old_pass;
+		$newPass = Hash::make($request->new_pass);
+		if (Hash::check($oldPass, $user->password)) {
+			$user->password = $newPass;
+			$user->update();
+			return response()->json([
+				'mess'=>'Change Success',
+			],200);
+		}
+		else {
+			return response()->json([
+				'mess'=>'Change Fail',
+			], 500);
+		}
 	}
 }

@@ -148,7 +148,8 @@ methods: {
         return;
     } else {
         this.loadings(true);
-        this.saveProductCombo(this.objData)
+        const { products, ...dataWithoutProducts } = this.objData;
+        this.saveProductCombo(dataWithoutProducts)
         .then(response => {
             this.loadings(false);
             this.$router.push({ name: "listProductCombo" });
